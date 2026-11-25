@@ -153,3 +153,13 @@ WHERE Sesso = 'F';
 SELECT TOP 3 *
 FROM Studenti
 WHERE Sesso = 'M';
+
+
+-- Selezione ultime righe 
+SELECT *
+FROM(
+    SELECT TOP 5 * 
+    FROM Studenti
+    ORDER BY StudenteId DESC
+) AS Ulitmi
+ORDER BY StudenteId ASC;
